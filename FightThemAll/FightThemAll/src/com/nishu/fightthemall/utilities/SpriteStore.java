@@ -7,7 +7,7 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 public class SpriteStore {
 
 	private static enum type {
-		GRASS;
+		GRASS, DIRT, TEST;
 	}
 
 	public static type getType(String t) {
@@ -15,6 +15,10 @@ public class SpriteStore {
 		switch (str) {
 		case "Grass":
 			return type.GRASS;
+		case "Dirt":
+			return type.DIRT;
+		case "test":
+			return type.TEST;
 		default:
 			return type.GRASS;
 		}
@@ -33,6 +37,10 @@ public class SpriteStore {
 		switch(t){
 		case GRASS:
 			return new Texture(Gdx.files.internal("res/tiles/grass.png"));
+		case DIRT:
+			return new Texture(Gdx.files.internal("res/tiles/dirt.png"));
+		case TEST:
+			return new Texture(Gdx.files.internal("res/player/test.png"));
 		default:
 			return new Texture(Gdx.files.internal("res/tiles/grass.png"));
 		}

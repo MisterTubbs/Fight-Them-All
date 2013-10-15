@@ -8,7 +8,7 @@ public class Camera {
 	
 	private OrthographicCamera cam;
 	
-	private float x, y, moveSpeed = 1.6f;
+	private float x, y, moveSpeed = 8f;
 	
 	public Camera(){
 		cam = new OrthographicCamera();
@@ -17,8 +17,6 @@ public class Camera {
 	
 	public void update(){
 		cam.update(true);
-		
-		
 	}
 	
 	public void move(){

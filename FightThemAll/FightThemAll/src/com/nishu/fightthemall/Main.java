@@ -14,14 +14,14 @@ public class Main extends Game {
 	@Override
 	public void create() {
 		batch = new SpriteBatch();
-		w = new World(batch, 1024, 1024);
+		w = new World(batch, 8192, 512);
 	}
 	
 	public void render(){
 		Gdx.gl10.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		Gdx.gl10.glClearColor(0f, 0f, 0.75f, 1f);
 		
-		w.update();
+		w.update(Gdx.graphics.getDeltaTime());
 		w.render();
 	}
 		
