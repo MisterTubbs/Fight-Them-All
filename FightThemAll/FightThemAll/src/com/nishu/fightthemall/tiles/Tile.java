@@ -6,7 +6,8 @@ import com.nishu.fightthemall.utilities.SpriteStore;
 
 public class Tile {
 
-	Sprite sprite;
+	private Sprite sprite;
+	private boolean isSolid;
 
 	public Tile(int x, int y, String type) {
 		this.sprite = SpriteStore.getSprite(type);
@@ -31,6 +32,14 @@ public class Tile {
 
 	public void setSprite(Sprite sprite) {
 		this.sprite = sprite;
+	}
+
+	public boolean isSolid() {
+		return true;
+	}
+
+	public void setSolid(boolean isSolid) {
+		this.isSolid = isSolid;
 	}
 
 }

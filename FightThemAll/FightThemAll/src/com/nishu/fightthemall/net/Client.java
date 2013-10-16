@@ -36,12 +36,16 @@ public class Client extends Thread{
 	}
 	
 	public void send(byte[] data){
-		DatagramPacket packet = new DatagramPacket(data, data.length, ip, 6666);
+		DatagramPacket packet = new DatagramPacket(data, data.length, ip, 8888);
 		try {
 			socket.send(packet);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void dispose(){
+		socket.close();
 	}
 	
 }

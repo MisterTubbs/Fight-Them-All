@@ -12,7 +12,7 @@ public class Server extends Thread{
 
 	public Server(){
 		try {
-			this.socket = new DatagramSocket(7677);
+			this.socket = new DatagramSocket(8888);
 		} catch (SocketException e) {
 			e.printStackTrace();
 		}
@@ -40,6 +40,10 @@ public class Server extends Thread{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void dispose(){
+		socket.close();
 	}
 	
 }

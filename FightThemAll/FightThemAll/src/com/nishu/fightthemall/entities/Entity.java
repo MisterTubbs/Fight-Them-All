@@ -3,6 +3,7 @@ package com.nishu.fightthemall.entities;
 import java.util.Random;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.nishu.fightthemall.tiles.Tile;
 
 public abstract class Entity {
 	
@@ -18,7 +19,7 @@ public abstract class Entity {
 	}
 
 	public abstract void render(SpriteBatch batch);
-	public abstract void update(float delta);
+	public abstract void update();
 	
 	public int getId() {
 		return id;
@@ -68,6 +69,9 @@ public abstract class Entity {
 
 	public void setRand(Random rand) {
 		this.rand = rand;
+	}
+
+	public void update(Tile[][] tiles, float delta) {
 	}
 	
 }

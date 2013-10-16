@@ -21,7 +21,7 @@ public class Main extends Game {
 		Gdx.gl10.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		Gdx.gl10.glClearColor(0f, 0f, 0.75f, 1f);
 		
-		w.update(Gdx.graphics.getDeltaTime());
+		w.update();
 		w.render();
 	}
 		
