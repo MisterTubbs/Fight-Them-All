@@ -17,4 +17,9 @@ public class TileVoid extends Tile {
 		return 0;
 	}
 
+	@Override
+	public boolean transparent() {
+		return false;
+	}
+
 }

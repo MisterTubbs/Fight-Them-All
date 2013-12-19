@@ -2,25 +2,26 @@ package com.nishu.fight.game.tiles;
 
 import com.nishu.fight.utilities.Spritesheet;
 
-public class TileStone extends Tile {
+public class TileLeaf extends Tile {
 
 	@Override
 	public float[] getTexCoords() {
-		return new float[] { 0 + Spritesheet.tiles.uniformSize(), 0 };
+		return new float[] { 0, 0 + Spritesheet.tiles.uniformSize() };
 	}
 
 	@Override
 	public boolean isSolid() {
-		return true;
+		return false;
 	}
 
 	@Override
 	public byte getID() {
-		return 1;
+		return 5;
 	}
 
 	@Override
 	public boolean transparent() {
-		return false;
+		return true;
 	}
+
 }

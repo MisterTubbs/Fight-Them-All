@@ -32,7 +32,7 @@ public class Main extends Screen {
 
 	@Override
 	public void render() {
-		ScreenTools.clearScreen(false, new Color4f(0, 0.1f, 0.75f, 1));
+		ScreenTools.clearScreen(false, new Color4f(0, 0.58f, 1f, 1));
 		world.render();
 	}
 

@@ -2,11 +2,11 @@ package com.nishu.fight.game.tiles;
 
 import com.nishu.fight.utilities.Spritesheet;
 
-public class TileAir extends Tile{
+public class TileGrass extends Tile{
 
 	@Override
 	public float[] getTexCoords() {
-		return new float[]{4 * Spritesheet.tiles.uniformSize(), 0};
+		return new float[]{2 * Spritesheet.tiles.uniformSize(), Spritesheet.tiles.uniformSize()};
 	}
 
 	@Override
@@ -15,13 +15,13 @@ public class TileAir extends Tile{
 	}
 
 	@Override
-	public byte getID() {
-		return -1;
+	public boolean transparent() {
+		return true;
 	}
 
 	@Override
-	public boolean transparent() {
-		return false;
+	public byte getID() {
+		return 6;
 	}
 
 }

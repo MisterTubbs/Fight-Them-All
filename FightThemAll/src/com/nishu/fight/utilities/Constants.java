@@ -10,7 +10,7 @@ public class Constants {
 	public static int WIDTH = 1280;
 	public static int HEIGHT = 720;
 	
-	public static int TILE_SIZE = 32;
-	public static double scrollSpeed = 8;
+	public static int TILE_SIZE = 48;
+	public static double scrollSpeed = 12;
 	
 }

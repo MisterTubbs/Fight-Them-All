@@ -19,4 +19,9 @@ public class TileTopGrass extends Tile {
 		return 2;
 	}
 
+	@Override
+	public boolean transparent() {
+		return false;
+	}
+
 }

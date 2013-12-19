@@ -6,6 +6,8 @@ import com.nishu.fight.game.maps.Map;
 import com.nishu.fight.utilities.Constants;
 import com.nishu.utils.ScreenTools;
 
+import static org.lwjgl.opengl.GL11.*;
+
 public class World {
 	
 	private Map map;
@@ -19,6 +21,8 @@ public class World {
 
 	private void initGL(){
 		ScreenTools.renderOrtho(0, Constants.WIDTH, 0, Constants.HEIGHT);
+		glEnable(GL_BLEND);
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	}
 
 	private void init(){
@@ -32,6 +36,13 @@ public class World {
 	}
 	
 	private void updateInput(){
+		while(Keyboard.next()){
+			if(Keyboard.getEventKeyState()){
+				if(Keyboard.isKeyDown(Keyboard.KEY_R)){
+					map.create();
+				}
+			}
+		}
 		if(Keyboard.isKeyDown(Keyboard.KEY_D)){
 			scrollx -= Constants.scrollSpeed;
 		}
